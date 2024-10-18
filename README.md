@@ -11,31 +11,35 @@ To address these challenges, a strategic solution is required—one that consoli
 
 Enterprise Manufacturers Ltd. struggled with inconsistent supplier performance monitoring across different plants. The lack of visibility into supplier quality led to frequent production disruptions and inconsistent outputs. In their effort to centralize supplier performance data, management raised several key questions:
 
-- Which vendors/plants are responsible for the highest defect rates?
-- Which vendors/plants cause the most downtime?
-- Are there specific material-vendor combinations that consistently present issues?
-- How does vendor performance vary across different plants?
-- Are there overlooked patterns or insights?
-- The company needed a clear, data-driven approach to visualize and answer these questions.
+1. Which vendors/plants are responsible for the highest defect rates?
+2. Which vendors/plants cause the most downtime? 
+3. Are there specific material-vendor combinations that consistently present issues?
+4. How does vendor performance vary across different plants?
+5. Are there overlooked patterns or insights?
+6. The company needed a clear, data-driven approach to visualize and answer these questions.
 
-Analysis Approach
+## Analysis Approach
 
-The core business requirement was clear: “We need to monitor the performance and quality of goods supplied to us.” With no existing procurement system and incomplete data, the goal was to deliver quick insights to improve supplier quality management. The analysis aimed to quantify the financial impact of poor quality and identify the key offenders—vendors, plants, and materials contributing to production inefficiencies.
+The core business requirement was clear: 
+
+*“Our company wants to start monitoring the performance and quality of goods sent to us. We don’t have a procurement system in place, and while we lack complete data, we need insights to monitor and improve this activity quickly.”*
+
+With no existing procurement system and incomplete data, the goal was to deliver quick insights to improve supplier quality management. The analysis aimed to quantify the financial impact of poor quality and identify the key offenders—vendors, plants, and materials contributing to production inefficiencies.
 
 Rather than presenting stakeholders with abstract metrics like defect counts or downtime minutes, the focus was on highlighting the financial cost of these issues. The goal was to clearly communicate how much money was being lost due to defects and identify the main sources of these problems.
 
-Dataset Overview
-
+## About the Dataset
 The dataset used in the analysis includes the following fields:
 
-Date: When the defect was recorded.
-Vendor: The supplier providing the material.
-Plant Location: The geographic site of the plant using the material.
-Category and Material Type: Classifications of the material.
-Defect Type: The nature of the defect.
-Total Defect Quantity: The number of defective units recorded.
-Total Downtime Minutes: The downtime caused by defective materials.
-Methodology
+- **Date:** When the defect was recorded.
+- **Vendor:** The supplier providing the material.
+- **Plant Location:** The geographic site of the plant using the material.
+- **Category and Material Type:** Classifications of the material.
+- **Defect Type:** The nature of the defect.
+- **Total Defect Quantity:** The number of defective units recorded.
+- **Total Downtime Minutes:** The downtime caused by defective materials.
+  
+## Methodology
 
 To streamline reporting and improve performance, the data was modeled using a star schema. Key steps included:
 
