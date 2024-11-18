@@ -1,4 +1,5 @@
-# Supplier-Quality
+# Improving Supplier Quality Management Through Business Intelligence: A Strategic Approach for Manufacturers
+
 ## Introduction
 
 For manufacturers, maintaining consistent raw material quality is critical to ensuring operational efficiency and reducing costs. However, many companies face challenges with supplier inconsistencies, leading to material defects that disrupt production, cause downtime, and increase expenses.
