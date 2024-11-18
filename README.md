@@ -1,5 +1,4 @@
 # Improving Supplier Quality Management Through Business Intelligence: A Strategic Approach for Manufacturers
-![](SQualityImage.jpg)
 
 ## Introduction
 
@@ -46,7 +45,7 @@ The dataset used in the analysis includes the following fields:
 
 To streamline reporting and improve performance, the data was modeled using a star schema. Key steps included:
 
-## Segmenting the dataset into dimension tables: After analyzing the data, I identified attributes that could be divided into separate dimension tables. 
+**Segmenting the dataset into dimension tables:** After analyzing the data, I identified attributes that could be divided into separate dimension tables. 
 By breaking the data into smaller, manageable parts, I created dimension tables with unique identifiers for categories such as **Vendor, Plant Location, Material Type,** and **Defect Type**.
 
 
