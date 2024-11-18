@@ -184,3 +184,6 @@ Centralizing procurement and performance data with Power BI equips the managemen
 
 Interactive Power BI Report
 Click [HERE](https://drive.google.com/file/d/1bQbAJy1X_ncNC_sabEWH1fc2_JJFUD2L/view?usp=drive_link) to view interactive report
+
+
+Let's connect and collaborate [LinkedIn](www.linkedin.com/in/cecilia-ojile-a180541a4)
