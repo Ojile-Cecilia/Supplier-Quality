@@ -181,4 +181,7 @@ These insights highlight critical areas for targeted action to enhance supplier 
 
 Business intelligence tools have the potential to transform supplier quality management by converting raw data into meaningful, actionable insights. For Enterprise Manufacturers Ltd., adopting a BI-driven approach uncovered trends, inefficiencies, and risks that might have otherwise been overlooked. By quantifying the financial impact of defective materials, the company successfully identified and addressed the underlying causes of production inefficiencies.  
 
-Centralizing procurement and performance data with Power BI equips the management team to make smarter decisions about vendor performance, plant operations, and material selection. This analysis not only pinpointed critical performance gaps but also laid the foundation for sustainable process improvements.  
+Centralizing procurement and performance data with Power BI equips the management team to make smarter decisions about vendor performance, plant operations, and material selection. This analysis not only pinpointed critical performance gaps but also laid the foundation for sustainable process improvements. 
+
+Interactive Power BI Report
+Click [HERE](https://drive.google.com/file/d/1bQbAJy1X_ncNC_sabEWH1fc2_JJFUD2L/view?usp=drive_link) to view interactive report
