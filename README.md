@@ -1,5 +1,5 @@
 # Improving Supplier Quality Management Through Business Intelligence: A Strategic Approach for Manufacturers
-![](SQualityImage.png)
+![](SQualityImage.jpg)
 
 ## Introduction
 
@@ -60,9 +60,15 @@ The objective was to develop a model optimized for efficient querying and insigh
 
 - **Building the Fact Table**: After establishing the dimension tables, I used Power BI's Merge feature to incorporate the keys back into the original dataset, resulting in a well-structured Fact Table.
 
+![](Facts_Dim_Table.png)
+
 **Creating a Date Table**: A crucial step in the process was building a dedicated Date Table. In data analysis, a Date Table is essential for creating time intelligence measures and applying time-related filters to reports. Using DAX (Data Analysis Expressions), I created an accurate Date Table that facilitated effective time series analysis, enabling the tracking of trends over time.
 
+![](Date_Table.png)
+
 **Star Schema Data Model**: With the Dimension and Fact Tables prepared, the next step was to design the data model. I established relationships by linking the primary keys in the dimension tables to the foreign keys in the Fact Table. This resulted in a streamlined Star Schema Model. Organizing the data in this manner ensures efficient report generation without performance issues.
+
+![](Data_Model.png)
 
 ## **Analysis**:  
 With the data prepared, the next challenge was designing a dashboard that provided actionable insights at a glance. I aimed to strike a balance between high-level summaries for executives and detailed breakdowns for procurement and production teams.  
@@ -79,41 +85,100 @@ I also needed to determine whether to present downtime in minutes or hours. I op
 
 Another question that arose was why downtime persisted even when defects seemed unrelated. I hypothesized that other factors, such as machine failures, power outages, staffing shortages, or delays in receiving materials, could contribute to the issue.
 
+![](LandingPage.png)
+
 
 The homepage was designed to deliver a clean and professional interface with intuitive navigation tailored for stakeholders. A navigation bar was incorporated to allow users to seamlessly switch between the main sections of the report, each highlighting different aspects of supplier quality and performance. The layout takes inspiration from modern website designs, ensuring even non-technical decision-makers can easily access essential metrics.  
 
 The emphasis was on utilizing graphic design to craft a visually appealing and user-friendly dashboard, making it simple for stakeholders to locate critical metrics at a glance.
 
 
+## Overview Page
+![](Overview.png)
 
-The final dashboard provided high-level summaries for executives and detailed breakdowns for procurement and production teams. Key metrics included:
+The top section of this page offers a summary of the key metrics:
 
-Downtime: Total hours lost due to defective materials.
-Defect Quantity: The number of defective units from suppliers.
-Downtime Cost: Financial losses due to downtime (assumed at $10/hour).
-Insights included:
+- **Defects**: The total number of defects reported across all vendors, along with percentage changes compared to the previous month and year.
+- **Downtime Hours**: The total downtime caused by defective materials, providing an immediate view of the operational impact.
+- **Downtime Cost**: A crucial insight — by assigning a custom Downtime Cost per Hour (in this case, $10), we could directly calculate the financial impact of downtime, making the cost implications clear for the executive team.
 
-A rising trend in defects and downtime, leading to significant financial losses.
-Identification of the worst-performing vendors and plants.
-Analysis of vendor-material and vendor-plant combinations to identify the most problematic relationships.
-Key Insights and Recommendations
+A monthly trend chart was included, allowing users to toggle between defect quantities and downtime hours to track how these metrics evolved throughout the year. Another important section on the page was the *Worst Performers* section, where I provided a breakdown of defect data by vendor, material, plant, and defect type.
 
-Rising Defects and Downtime: Defects surged to 2.6 billion units, with 216,000 hours of downtime, resulting in $2.16 million in financial losses.
-Worst-Performing Vendors: Certain suppliers were identified as high-risk, requiring targeted improvement initiatives.
-Plant-Specific Issues: Several plants were highlighted as significant contributors to defect-related downtime.
-Material Performance: Raw materials were the most problematic, with a need for process and supply chain improvements.
-Recommendations:
+Additionally, I needed to display the ratio of impacted versus non-impacted defects and their distribution over the years.
 
-Centralize Data and Automate Reporting: Implement a centralized system to track and evaluate supplier performance across all plants.
-Focus on Financial Impact: Emphasize the financial costs of supplier quality issues to drive data-driven decision-making.
-Implement a Continuous Improvement Program: Establish programs to reduce downtime, improve material quality, and hold suppliers accountable.
-Leverage Advanced Analytics: Use predictive models to address issues before they result in significant downtime or material waste.
-Conclusion
+## Vendor Performance
+![](VendorPerformance.png)
 
-Business intelligence tools can transform supplier quality management by turning raw data into actionable insights. For Enterprise Manufacturers Ltd., this BI-driven approach revealed trends and inefficiencies that were previously unnoticed. Centralizing procurement and performance data through Power BI will allow for more informed decision-making, improving supplier relationships and operational efficiency in the long term.
+For the vendor analysis, the objective was to identify which suppliers were causing the most production issues. A **Top N Analysis** feature was incorporated into the dashboard, enabling users to filter and focus on a specific number of vendors. The analysis displayed either the top or bottom performers based on selected metrics, such as **Downtime Hours** or **Defect Quantity**, providing actionable insights into vendors excelling or underperforming.
+
+Vendors were categorized into **high**, **medium**, and **low-risk** groups based on their defect impact and downtime performance, which allowed for a dynamic correlation analysis between these factors. Risk levels were determined using the following thresholds:
+- **High-risk:** Downtime exceeds 800 hours.  
+- **Medium-risk:** Downtime between 400 and 800 hours.  
+- **Low-risk:** Downtime less than 400 hours.
+
+This approach helped to clearly identify high-priority vendors for intervention and facilitated better decision-making regarding supplier performance and risk management.
+
+## Plant Performance
+![](PlantPerformance.png)
+
+To analyze plant performance, I introduced a **Top N Analysis** feature to identify the best and worst-performing plants based on key metrics. A **geographic map** was added to visualize the distribution of plants and their performance across regions, enhancing spatial awareness. Additionally, a **detailed table** broke down metrics such as **defect impact**, **no impact**, and **rejected defects**, helping to highlight the most problematic locations.
+
+To provide deeper insights, **interactive tooltips** were included, offering quick access to specific metrics and information about each plant's location. This combination of visual and data-driven elements allowed for a comprehensive understanding of plant performance, enabling targeted improvements and decision-making.
+
+## Material Performance
+![](MaterialPerformance.png)
+
+To analyze material performance, I provided a **detailed breakdown** of key metrics, including **downtime by material type, defect type, and category**. Critical defect categories, such as **Logistics** and **Mechanicals**, were visually highlighted to emphasize their importance. 
+
+The analysis revealed an **increasing trend in Mechanicals defects**, indicating potential issues with **equipment maintenance** or **process inefficiencies**. Similarly, the rising trend in **Logistics defects** pointed to the need for **supply chain optimization**. These insights enabled stakeholders to identify areas requiring immediate attention and implement targeted solutions for material performance improvement.
+
+## Downtime Impact
+![](DowntimeImpact.png)
+
+This page highlights the **significant financial losses** caused by defective materials, providing a clear and potentially alarming view for management. The **top section** breaks down downtime costs per hour, pinpointing specific days with the highest expenses. Notably, **September** and **December** experienced the most significant spikes. A **bar chart on the right** visualizes monthly downtime costs, enabling quick identification of peak periods.
+
+At the **bottom of the page**, users can explore **Vendor-Plant** and **Vendor-Material combinations** to determine top and bottom performers.
+
+## Key Insights Summary 
+
+**Rising Defects and Downtime**  
+Defective materials resulted in a surge of **2.6 billion defect units** and **216,000 hours of downtime**, translating to a financial loss of **$2.16 million**. This trend highlights the direct link between defective materials and reduced production efficiency.
+
+**Financial Impact**  
+The analysis revealed a strong **correlation between downtime and financial losses**. At an estimated **$10 per hour of downtime**, the company faced over **$2 million in costs**, with notable peaks in **September** and **December** due to severe disruptions. These insights emphasize the impact of supplier quality issues on the company’s bottom line.  
+
+**Worst-Performing Vendors**  
+Certain suppliers were flagged as **high-risk** due to their repeated contributions to defects and downtime. Vendors such as **Avamm**, **Meejo**, and **Yombu** emerged as top offenders, producing the most defects and incurring significant downtime. These findings highlight the need for targeted supplier improvement strategies.
+
+**Plant-Specific Challenges**  
+Several plants were identified as hotspots for defect-related downtime. **Hingham**, **Charles City**, and **Twin Rocks** reported defect quantities nearing **100 million units each**, indicating areas requiring immediate attention and process optimization.### Key Insights  
+
+**Defect Categories**  
+Recurring issues like **Bad Seams** emerged as the most frequent defect type, requiring focused intervention from both **suppliers** and **internal quality control teams** to mitigate their impact.
+
+**Material Performance**  
+**Raw materials** were identified as the most problematic, causing substantial downtime. Rising trends in **mechanical** and **logistics defects** point to the need for improvements in **process efficiency** and **supply chain management**.
+
+**Vendor-Material and Vendor-Plant Combinations**  
+These insights highlight critical areas for targeted action to enhance supplier and material performance. The analysis delved into specific **vendor-material** and **vendor-plant combinations** to pinpoint underperformers. For instance, the vendor **Abata**, when supplying raw materials, was a significant contributor to production issues, with:
+- **3 million defects**  
+- **249 downtime hours**  
+- An estimated loss of **$2,500 in productivity**  
 
 
+## **Recommendations**  
+
+1. **Centralize Data and Automate Reporting:** Establishing a centralized data management system is crucial for monitoring and assessing supplier performance across various plants. Automation of data collection and reporting processes will improve visibility, minimize manual workload, and maintain consistency across operations.  
+
+2. **Prioritize Financial Impact:** Instead of solely tracking defect counts and downtime, manufacturers should highlight the financial consequences of production delays. This approach helps business leaders understand the cost implications of supplier quality issues, promoting quicker and more informed decision-making.  
+
+3. **Develop a Continuous Improvement Program:** Using insights from supplier performance data, manufacturers should implement a program aimed at continuous improvement. This initiative should focus on reducing downtime, enhancing material quality, and resolving recurring defects, ultimately increasing supplier accountability and supply chain efficiency.  
+
+4. **Adopt Advanced Analytics:** To elevate supplier quality management, manufacturers should incorporate advanced analytics and predictive modeling. These tools enable early detection of patterns and trends, allowing businesses to address potential issues proactively before they escalate into costly disruptions or material losses.
 
 
+## **Conclusion**  
 
+Business intelligence tools have the potential to transform supplier quality management by converting raw data into meaningful, actionable insights. For Enterprise Manufacturers Ltd., adopting a BI-driven approach uncovered trends, inefficiencies, and risks that might have otherwise been overlooked. By quantifying the financial impact of defective materials, the company successfully identified and addressed the underlying causes of production inefficiencies.  
 
+Centralizing procurement and performance data with Power BI equips the management team to make smarter decisions about vendor performance, plant operations, and material selection. This analysis not only pinpointed critical performance gaps but also laid the foundation for sustainable process improvements.  
