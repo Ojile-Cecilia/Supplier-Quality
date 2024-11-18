@@ -1,4 +1,5 @@
 # Improving Supplier Quality Management Through Business Intelligence: A Strategic Approach for Manufacturers
+![](SQualityImage.png)
 
 ## Introduction
 
@@ -30,6 +31,7 @@ With no existing procurement system and incomplete data, the goal was to deliver
 Rather than presenting stakeholders with abstract metrics like defect counts or downtime minutes, the focus was on highlighting the financial cost of these issues. The goal was to clearly communicate how much money was being lost due to defects and identify the main sources of these problems.
 
 ## About the Dataset
+![](Dataset.png)
 The dataset used in the analysis includes the following fields:
 
 - **Date:** When the defect was recorded.
